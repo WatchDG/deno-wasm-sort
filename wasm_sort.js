@@ -37,6 +37,7 @@ let cachedTextDecoder = new TextDecoder(
 cachedTextDecoder.decode();
 
 let cachegetUint8Memory0 = null;
+
 function getUint8Memory0() {
   if (
     cachegetUint8Memory0 === null ||
@@ -60,6 +61,7 @@ function addBorrowedObject(obj) {
 }
 
 let cachegetInt32Memory0 = null;
+
 function getInt32Memory0() {
   if (
     cachegetInt32Memory0 === null ||
@@ -73,10 +75,11 @@ function getInt32Memory0() {
 function getArrayI32FromWasm0(ptr, len) {
   return getInt32Memory0().subarray(ptr / 4, ptr / 4 + len);
 }
+
 /**
-* @param {Int32Array} a
-* @returns {Int32Array}
-*/
+ * @param {Int32Array} a
+ * @returns {Int32Array}
+ */
 export function bubble_sort_int32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
@@ -93,9 +96,9 @@ export function bubble_sort_int32array(a) {
 }
 
 /**
-* @param {Int32Array} a
-* @returns {Int32Array}
-*/
+ * @param {Int32Array} a
+ * @returns {Int32Array}
+ */
 export function merge_sort_int32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
@@ -142,11 +145,11 @@ const imports = {
 };
 
 const file = new URL(import.meta.url).pathname;
-const wasmFile =
-  file.substring(
-    0,
-    file.lastIndexOf(Deno.build.os === "windows" ? "\\" : "/") + 1,
-  ) + "wasm_sort_bg.wasm";
+console.log(file);
+const wasmFile = (file.substring(
+  0,
+  file.lastIndexOf("/") + 1,
+) + "wasm_sort_bg.wasm").replace(/^\//, "");
 const wasmModule = new WebAssembly.Module(Deno.readFileSync(wasmFile));
 const wasmInstance = new WebAssembly.Instance(wasmModule, imports);
 const wasm = wasmInstance.exports;
