@@ -15,4 +15,12 @@ export {
   merge_sort_uint16array,
   merge_sort_uint32array,
   merge_sort_uint8array,
+  selection_sort_float32array,
+  selection_sort_float64array,
+  selection_sort_int16array,
+  selection_sort_int32array,
+  selection_sort_int8array,
+  selection_sort_uint16array,
+  selection_sort_uint32array,
+  selection_sort_uint8array,
 } from "./wasm/wasm_sort.js";
