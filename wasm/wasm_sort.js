@@ -1,3 +1,5 @@
+import { wasmCode } from "./wasm_code.js";
+
 const heap = new Array(32).fill(undefined);
 
 heap.push(undefined, null, true, false);
@@ -114,7 +116,7 @@ export function merge_sort_int32array(a) {
   }
 }
 
-const imports = {
+export const imports = {
   __wbindgen_placeholder__: {
     __wbg_length_329ad67a742437ad: function (arg0) {
       var ret = getObject(arg0).length;
@@ -144,12 +146,6 @@ const imports = {
   },
 };
 
-const file = new URL(import.meta.url).pathname;
-console.log(file);
-const wasmFile = (file.substring(
-  0,
-  file.lastIndexOf("/") + 1,
-) + "wasm_sort_bg.wasm").replace(/^\//, "");
-const wasmModule = new WebAssembly.Module(Deno.readFileSync(wasmFile));
+const wasmModule = new WebAssembly.Module(wasmCode);
 const wasmInstance = new WebAssembly.Instance(wasmModule, imports);
 const wasm = wasmInstance.exports;
