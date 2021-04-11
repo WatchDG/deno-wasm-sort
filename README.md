@@ -7,7 +7,7 @@ add to `deps.ts`
 ```ts
 export {
     merge_sort_int32array
-} from "https://deno.land/x/wasm_sort@1.2.0/mod.ts";
+} from "https://deno.land/x/wasm_sort@1.3.0/mod.ts";
 ```
 
 ## init and run
