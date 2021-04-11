@@ -1,4 +1,18 @@
 export {
+  bubble_sort_float32array,
+  bubble_sort_float64array,
+  bubble_sort_int16array,
   bubble_sort_int32array,
+  bubble_sort_int8array,
+  bubble_sort_uint16array,
+  bubble_sort_uint32array,
+  bubble_sort_uint8array,
+  merge_sort_float32array,
+  merge_sort_float64array,
+  merge_sort_int16array,
   merge_sort_int32array,
+  merge_sort_int8array,
+  merge_sort_uint16array,
+  merge_sort_uint32array,
+  merge_sort_uint8array,
 } from "./wasm/wasm_sort.js";
