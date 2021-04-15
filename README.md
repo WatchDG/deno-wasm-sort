@@ -6,7 +6,7 @@ add to `deps.ts`
 
 ```ts
 export {
-    merge_sort_int32array
+    merge_sort
 } from "https://deno.land/x/wasm_sort@1.4.0/mod.ts";
 ```
 
@@ -14,9 +14,9 @@ export {
 
 ```ts
 import {
-    merge_sort_int32array
+    merge_sort
 } from './deps.ts';
 
 const array = new Int32Array([5, 4, 3, 2, 1]);
-console.log(merge_sort_int32array(array));
+console.log(merge_sort(array));
 ```
