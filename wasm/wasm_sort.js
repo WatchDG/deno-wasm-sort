@@ -79,10 +79,10 @@ function getArrayI32FromWasm0(ptr, len) {
 * @param {Int32Array} a
 * @returns {Int32Array}
 */
-export function bubble_sort_int32array(a) {
+export function insertion_sort_int32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_int32array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_int32array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayI32FromWasm0(r0, r1).slice();
@@ -112,10 +112,10 @@ function getArrayI16FromWasm0(ptr, len) {
 * @param {Int16Array} a
 * @returns {Int16Array}
 */
-export function bubble_sort_int16array(a) {
+export function insertion_sort_int16array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_int16array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_int16array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayI16FromWasm0(r0, r1).slice();
@@ -145,10 +145,10 @@ function getArrayI8FromWasm0(ptr, len) {
 * @param {Int8Array} a
 * @returns {Int8Array}
 */
-export function bubble_sort_int8array(a) {
+export function insertion_sort_int8array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_int8array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_int8array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayI8FromWasm0(r0, r1).slice();
@@ -178,10 +178,10 @@ function getArrayU32FromWasm0(ptr, len) {
 * @param {Uint32Array} a
 * @returns {Uint32Array}
 */
-export function bubble_sort_uint32array(a) {
+export function insertion_sort_uint32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_uint32array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_uint32array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayU32FromWasm0(r0, r1).slice();
@@ -211,10 +211,10 @@ function getArrayU16FromWasm0(ptr, len) {
 * @param {Uint16Array} a
 * @returns {Uint16Array}
 */
-export function bubble_sort_uint16array(a) {
+export function insertion_sort_uint16array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_uint16array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_uint16array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayU16FromWasm0(r0, r1).slice();
@@ -233,10 +233,10 @@ function getArrayU8FromWasm0(ptr, len) {
 * @param {Uint8Array} a
 * @returns {Uint8Array}
 */
-export function bubble_sort_uint8array(a) {
+export function insertion_sort_uint8array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_uint8array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_uint8array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayU8FromWasm0(r0, r1).slice();
@@ -266,10 +266,10 @@ function getArrayF64FromWasm0(ptr, len) {
 * @param {Float64Array} a
 * @returns {Float64Array}
 */
-export function bubble_sort_float64array(a) {
+export function insertion_sort_float64array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_float64array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_float64array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayF64FromWasm0(r0, r1).slice();
@@ -299,162 +299,10 @@ function getArrayF32FromWasm0(ptr, len) {
 * @param {Float32Array} a
 * @returns {Float32Array}
 */
-export function bubble_sort_float32array(a) {
+export function insertion_sort_float32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.bubble_sort_float32array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayF32FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 4);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Int32Array} a
-* @returns {Int32Array}
-*/
-export function improved_bubble_sort_int32array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_int32array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayI32FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 4);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Int16Array} a
-* @returns {Int16Array}
-*/
-export function improved_bubble_sort_int16array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_int16array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayI16FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 2);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Int8Array} a
-* @returns {Int8Array}
-*/
-export function improved_bubble_sort_int8array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_int8array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayI8FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 1);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Uint32Array} a
-* @returns {Uint32Array}
-*/
-export function improved_bubble_sort_uint32array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_uint32array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayU32FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 4);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Uint16Array} a
-* @returns {Uint16Array}
-*/
-export function improved_bubble_sort_uint16array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_uint16array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayU16FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 2);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Uint8Array} a
-* @returns {Uint8Array}
-*/
-export function improved_bubble_sort_uint8array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_uint8array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayU8FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 1);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Float64Array} a
-* @returns {Float64Array}
-*/
-export function improved_bubble_sort_float64array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_float64array(retptr, addBorrowedObject(a));
-    var r0 = getInt32Memory0()[retptr / 4 + 0];
-    var r1 = getInt32Memory0()[retptr / 4 + 1];
-    var v0 = getArrayF64FromWasm0(r0, r1).slice();
-    wasm.__wbindgen_free(r0, r1 * 8);
-    return v0;
-  } finally {
-    wasm.__wbindgen_add_to_stack_pointer(16);
-    heap[stack_pointer++] = undefined;
-  }
-}
-
-/**
-* @param {Float32Array} a
-* @returns {Float32Array}
-*/
-export function improved_bubble_sort_float32array(a) {
-  try {
-    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.improved_bubble_sort_float32array(retptr, addBorrowedObject(a));
+    wasm.insertion_sort_float32array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayF32FromWasm0(r0, r1).slice();
@@ -607,6 +455,158 @@ export function selection_sort_float32array(a) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
     wasm.selection_sort_float32array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayF32FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 4);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Int32Array} a
+* @returns {Int32Array}
+*/
+export function bubble_sort_int32array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_int32array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayI32FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 4);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Int16Array} a
+* @returns {Int16Array}
+*/
+export function bubble_sort_int16array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_int16array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayI16FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 2);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Int8Array} a
+* @returns {Int8Array}
+*/
+export function bubble_sort_int8array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_int8array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayI8FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 1);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Uint32Array} a
+* @returns {Uint32Array}
+*/
+export function bubble_sort_uint32array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_uint32array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayU32FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 4);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Uint16Array} a
+* @returns {Uint16Array}
+*/
+export function bubble_sort_uint16array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_uint16array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayU16FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 2);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Uint8Array} a
+* @returns {Uint8Array}
+*/
+export function bubble_sort_uint8array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_uint8array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayU8FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 1);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Float64Array} a
+* @returns {Float64Array}
+*/
+export function bubble_sort_float64array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_float64array(retptr, addBorrowedObject(a));
+    var r0 = getInt32Memory0()[retptr / 4 + 0];
+    var r1 = getInt32Memory0()[retptr / 4 + 1];
+    var v0 = getArrayF64FromWasm0(r0, r1).slice();
+    wasm.__wbindgen_free(r0, r1 * 8);
+    return v0;
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    heap[stack_pointer++] = undefined;
+  }
+}
+
+/**
+* @param {Float32Array} a
+* @returns {Float32Array}
+*/
+export function bubble_sort_float32array(a) {
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    wasm.bubble_sort_float32array(retptr, addBorrowedObject(a));
     var r0 = getInt32Memory0()[retptr / 4 + 0];
     var r1 = getInt32Memory0()[retptr / 4 + 1];
     var v0 = getArrayF32FromWasm0(r0, r1).slice();
