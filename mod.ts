@@ -7,6 +7,14 @@ import {
   bubble_sort_uint16array,
   bubble_sort_uint32array,
   bubble_sort_uint8array,
+  heapsort_float32array,
+  heapsort_float64array,
+  heapsort_int16array,
+  heapsort_int32array,
+  heapsort_int8array,
+  heapsort_uint16array,
+  heapsort_uint32array,
+  heapsort_uint8array,
   insertion_sort_float32array,
   insertion_sort_float64array,
   insertion_sort_int16array,
@@ -42,6 +50,14 @@ export {
   bubble_sort_uint16array,
   bubble_sort_uint32array,
   bubble_sort_uint8array,
+  heapsort_float32array,
+  heapsort_float64array,
+  heapsort_int16array,
+  heapsort_int32array,
+  heapsort_int8array,
+  heapsort_uint16array,
+  heapsort_uint32array,
+  heapsort_uint8array,
   insertion_sort_float32array,
   insertion_sort_float64array,
   insertion_sort_int16array,
@@ -183,5 +199,32 @@ export function merge_sort(array: TArray) {
   }
   if (array instanceof Float64Array) {
     return merge_sort_float64array(array);
+  }
+}
+
+export function heapsort(array: TArray) {
+  if (array instanceof Uint8Array) {
+    return heapsort_uint8array(array);
+  }
+  if (array instanceof Uint16Array) {
+    return heapsort_uint16array(array);
+  }
+  if (array instanceof Uint32Array) {
+    return heapsort_uint32array(array);
+  }
+  if (array instanceof Int8Array) {
+    return heapsort_int8array(array);
+  }
+  if (array instanceof Int16Array) {
+    return heapsort_int16array(array);
+  }
+  if (array instanceof Int32Array) {
+    return heapsort_int32array(array);
+  }
+  if (array instanceof Float32Array) {
+    return heapsort_float32array(array);
+  }
+  if (array instanceof Float64Array) {
+    return heapsort_float64array(array);
   }
 }
