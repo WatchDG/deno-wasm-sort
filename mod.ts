@@ -23,6 +23,14 @@ import {
   insertion_sort_uint16array,
   insertion_sort_uint32array,
   insertion_sort_uint8array,
+  introsort_float32array,
+  introsort_float64array,
+  introsort_int16array,
+  introsort_int32array,
+  introsort_int8array,
+  introsort_uint16array,
+  introsort_uint32array,
+  introsort_uint8array,
   merge_sort_float32array,
   merge_sort_float64array,
   merge_sort_int16array,
@@ -74,6 +82,14 @@ export {
   insertion_sort_uint16array,
   insertion_sort_uint32array,
   insertion_sort_uint8array,
+  introsort_float32array,
+  introsort_float64array,
+  introsort_int16array,
+  introsort_int32array,
+  introsort_int8array,
+  introsort_uint16array,
+  introsort_uint32array,
+  introsort_uint8array,
   merge_sort_float32array,
   merge_sort_float64array,
   merge_sort_int16array,
@@ -269,5 +285,32 @@ export function quicksort(array: TArray) {
   }
   if (array instanceof Float64Array) {
     return quicksort_float64array(array);
+  }
+}
+
+export function introsort(array: TArray) {
+  if (array instanceof Uint8Array) {
+    return introsort_uint8array(array);
+  }
+  if (array instanceof Uint16Array) {
+    return introsort_uint16array(array);
+  }
+  if (array instanceof Uint32Array) {
+    return introsort_uint32array(array);
+  }
+  if (array instanceof Int8Array) {
+    return introsort_int8array(array);
+  }
+  if (array instanceof Int16Array) {
+    return introsort_int16array(array);
+  }
+  if (array instanceof Int32Array) {
+    return introsort_int32array(array);
+  }
+  if (array instanceof Float32Array) {
+    return introsort_float32array(array);
+  }
+  if (array instanceof Float64Array) {
+    return introsort_float64array(array);
   }
 }
